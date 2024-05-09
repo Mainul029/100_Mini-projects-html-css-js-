@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: blue;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper .loader{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+/* here is the CSS code for the loading all the DOTs at once */
+
+.loader .loading{
+    background:white ;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0 10px;
+    animation: load 0.8s ease infinite;
+}
+
+/* here is the CSS code for the loading for all the DOTs individually */
+
+/* loading delay for DOT 1 */
+.loader .loading.one{
+    
+    animation-delay: 0.3s;
+}
+
+/* loading delay for DOT 2 */
+.loader .loading.two{
+    
+    animation-delay: 0.4s;
+}
+
+/* loading delay for DOT 3 */
+.loader .loading.three{
+    
+    animation-delay: 0.5s;
+}
+
+/* loading delay for DOT 4 */
+.loader .loading.four{
+    
+    animation-delay: 0.6s;
+}
+
+
+/* here is the code for setting up the LOADING percentage 
+(have to learn more about this "@keyframe" thing */
+
+@keyframes load {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    50% {
+        width: 20px;
+        height: 20px;
+    }
+}
+    
