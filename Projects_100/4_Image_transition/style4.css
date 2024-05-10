@@ -1,3 +1,5 @@
+/*in css any main part of html (body, head..) doesn't require a Dot(.) at the beginning for Styling. Only the Classes require Dot (.) at the beginning of Styling Code Block*/
+
 body{
     margin: 0;
     padding: 0;
