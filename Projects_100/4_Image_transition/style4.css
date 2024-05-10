@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Screen a Jei box er vitore image gula rakhbo+dekhabo sheitar Size + Style code */
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #222;
+}
+/* All images are added here in this copde section and stylized
+**** Ekhanei Ei code er main part ta ei "clip-path:()" section er kaj tai -.- */
+.clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s; /* ei line ta add koray hover korle transition effect er Time ta fix hobe*/
+}
+
+.clip1{
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
+}
+
+.clip2{
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+}
+
+.clip3{
+    background-image: url('bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+
+/* ei line ta add koray hover korle transition effect er Time ta fix hobe*/
+
+.container:hover .clip{
+    /*ekhane Hover only "container" class er upore apply kora hoise, tai (.containr:hover....) likha hoise*/
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+}
+
+.container .clip:hover{
+
+    /*ekhane Hover only "clip" class er upore apply kora hoise, tai (.clip:hover) likha hoise*/
+    clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
+}
+
+/* Main  4 Vertecis of frame, Edit them and learn how they works
+1:clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+2: clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
