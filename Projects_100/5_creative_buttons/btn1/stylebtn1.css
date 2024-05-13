@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    font-family: sans-serif;
+}
+
+/*Here <a> is an Ancor tag, thats why no Dot is used for Styling the contents inside this tag*/
+a{
+    text-decoration: none;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+/* We are providing this "DOWNLOAD" as a "content, Before this <a> tag"*/
+
+a:before{
+    content: "DOWNLOAD";
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: antiquewhite;
+    transform: translateY(100%); 
+    /* translateY() value negative dile upor theke niche drop korbe, Ekhon plus ase so niche theke upore jabe Hover er porer item ta (Y-axis a move korbe)
+    translateX() dile X-axis a move korto*/
+    transition: all 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Creating the Hover effect on <a> tag contents*/
+
+a:hover::before{
+    transform:translateX(0);
+}
